@@ -146,3 +146,48 @@ body {
     background-color: black;
     font-family: Cookie, cursive;
 }
+
+@media screen and (max-width: 768px) {
+    #logo {
+      width: 40%;
+    }
+    .menu {
+      width: 40%;
+    }
+    .contact-info {
+      width: 20%;
+    }
+    .menu ul li {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    #logo {
+      width: 50%;
+    }
+    .menu {
+      width: 70%;
+    }
+    .contact-info {
+      width: 30%;
+    }
+    .slider-half-item {
+      width: 100%;
+    }
+    .menu ul li {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .menu ul li a {
+      font-size: 1.2rem;
+    }
+    .contact-info .tel {
+      font-size: 1rem;
+    }
+  }
+  
+
