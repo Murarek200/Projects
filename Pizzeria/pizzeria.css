@@ -162,6 +162,9 @@ body {
       text-align: center;
       margin-bottom: 10px;
     }
+    .column-advantage {
+        height: 120px;
+    }
   }
   
   @media screen and (max-width: 576px) {
@@ -187,6 +190,9 @@ body {
     }
     .contact-info .tel {
       font-size: 1rem;
+    }
+    .column-advantage {
+        height: 90px;
     }
   }
   
