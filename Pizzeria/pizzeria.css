@@ -1,30 +1,27 @@
-:root {
-    box-sizing: border-box;
-    color: white;
-}
 *, ::before, ::after {
-    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 body {
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-image: url("https://cdn.pixabay.com/photo/2017/04/05/01/20/wood-2203740_1280.jpg");
 }
-#header {
-    background: black;
-    padding: 5px;
+header {
     font-family: 'Cookie', cursive;
-}
-#logo {
-    float: left;
-    width: 20%;
-}
-#logo img {
-    width: 60px;
-    margin-left: 10px;
+    padding: 5px;
+    background-color: black;
+    width: 100vw;
 }
 .menu {
-    float: left; 
-    width: 60%;
-    text-align: center;  
+    text-align: center;
+    width: 100vw;
 }
 .menu ul li {
     display: inline-block;
@@ -32,9 +29,6 @@ body {
 }
 .menu ul li a {
     color: white;
-    font-size: 1.4rem;
-}
-.menu ul li {
     font-size: 1.4rem;
 }
 .menu ul li a:hover {
@@ -46,15 +40,17 @@ body {
     clear: both;
 }
 .slider-box {
-    height: 200px;
+    /* width: 100vw;
+    height: 20vh; */
     background-color: black;
+    margin: 25px 0px;
+    align-items: center;
 }
 .slider-half-item {
-    width: 50%;
+    width: 50vw;
     float: left;
     height: 100%;
     font-family: cursive, Geneva;
-    padding: 10px;
 }
 .slider-half-item article {
     margin: 2rem;
@@ -69,7 +65,17 @@ body {
     margin: 2px;
     font-size: 0.7rem;
 }
-
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
 .order-button {
     color: #7FD7FF;
     border: 2px solid #7FD7FF;
@@ -83,6 +89,8 @@ body {
     background-color: #333333;
 }
 .pizza-img {
+    width: 50vw;
+    height: 20vh;
     background-image: url(https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -91,12 +99,12 @@ body {
 .advantages-box {
     background-color: transparent;
 }
+
 .advantages-one-third {
-    width: 33.3%;
-    min-width: 250px;
+    width: 33.3vw;
+    min-width: 225px;
     float: left;
-    padding: 20px;
-    margin: 30px 0px 30px;
+    margin: 25px 0px;
 }
 .column-advantage {
     position: relative;
@@ -123,11 +131,13 @@ body {
     left: 2%;
     bottom: 10px;
 }
+
+
 .kitchen-menu {
     background-color: black;
 }
 .menu-one-forth {
-    width: 25%;
+    width: 50vw;
     min-width: 250px;
     float: left;
     font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
@@ -139,53 +149,40 @@ body {
     width: 100%;
 }
 .page-footer {
-    width: 100%;
+    width: 100vw;
     background-color: black;
     font-family: Cookie, cursive;
+    padding: 15px;
+    margin: 25px 0px;
 }
 
-@media screen and (max-width: 768px) {
-    #logo {
-      width: 40%;
-    }
-    .menu {
-      width: 40%;
-    }
-    .menu ul li {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .button-section {
-        position: absolute;
-    }
-    .page-footer{
-        width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 576px) {
-    #logo {
-      width: 50%;
-    }
-    .menu {
-      width: 70%;
-    }
+@media screen and (max-width: 675px) {
     .slider-half-item {
-      width: 100%;
-    }
-    .menu ul li {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .menu ul li a {
-      font-size: 1.2rem;
-    }
-    .button-section {
-        position: absolute;
-    }
-    .page-footer{
         width: 100%;
+        text-align: center;
+    }
+    .bot-button {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .advantages-one-third {
+        float: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    .menu-one-forth {
+        float: none;
+        width: 100vw;
+        flex-direction: column;
+    }
+    .pizza-img {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    .slider-half-item article {
+       
+        
+        
     }
 }
